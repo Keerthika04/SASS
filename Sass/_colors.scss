@@ -1,0 +1,31 @@
+$colors: (
+    primary: #007bff,
+    secondary: #f4f4f4,
+    success: #28a745,
+    beigeC: #f5f5dc,
+    info: #17a2b8,
+    warning: #ffc107,
+    error: #dc3545,
+    light: #ffffff,
+    dark: #343a40
+);
+
+@each $key, $value in $colors {
+    .text-#{$key} {
+        color: $value;
+    }
+
+    .bg-#{$key} {
+        background-color: $value;
+    }
+
+    @for $i from 1 through 3 {
+        .text-#{$key}-lighter-#{$i} {
+            color: rgba($value, $i * 10);
+        }
+
+        .bg-#{$key}-lighter-#{$i} {
+            background-color: rgba($value, $i * 10);
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import "colors.scss";
+
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 20px;
+    background-color: map-get($colors, beigeC);
+    color: map-get($colors, dark);
+  }
+  
+  h2 {
+    color: map-get($colors, primary);
+  }
+  
+  p, ul, li {
+    color: map-get($colors, dark);
+  }
+
+  
+  pre {
+    background-color: map-get($colors, dark);
+    color: map-get($colors, light);
+    padding: 15px;
+    border-radius: 5px;
+    overflow: auto;
+  }
+  
+  code {
+    font-family: monospace;
+  }
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid map-get($colors, dark);
+    border-radius: 5px;
+    background-color: map-get($colors, secondary);
+
+    // Use of Mixin
+    @mixin rounded-corners($radius) {
+        border-radius: $radius;
+        border: none;
+    }
+
+    // Use of extend and Mixin
+    .btn {
+        @include rounded-corners(5px);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    // Use of Mixin
+    .mixin {
+        @include rounded-corners(5px);
+        padding: 10px 20px;
+        background-color: map-get($colors, info);
+        color: map-get($colors , dark);
+    }
+
+    .extend {
+        // Use of extend
+        @extend .btn;
+        background-color: map-get($colors, success);
+        color: map-get($colors , light);
+    }
+}

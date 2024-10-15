@@ -1,0 +1,342 @@
+.text-primary {
+  color: #007bff;
+}
+
+.bg-primary {
+  background-color: #007bff;
+}
+
+.text-primary-lighter-1 {
+  color: #007bff;
+}
+
+.bg-primary-lighter-1 {
+  background-color: #007bff;
+}
+
+.text-primary-lighter-2 {
+  color: #007bff;
+}
+
+.bg-primary-lighter-2 {
+  background-color: #007bff;
+}
+
+.text-primary-lighter-3 {
+  color: #007bff;
+}
+
+.bg-primary-lighter-3 {
+  background-color: #007bff;
+}
+
+.text-secondary {
+  color: #f4f4f4;
+}
+
+.bg-secondary {
+  background-color: #f4f4f4;
+}
+
+.text-secondary-lighter-1 {
+  color: #f4f4f4;
+}
+
+.bg-secondary-lighter-1 {
+  background-color: #f4f4f4;
+}
+
+.text-secondary-lighter-2 {
+  color: #f4f4f4;
+}
+
+.bg-secondary-lighter-2 {
+  background-color: #f4f4f4;
+}
+
+.text-secondary-lighter-3 {
+  color: #f4f4f4;
+}
+
+.bg-secondary-lighter-3 {
+  background-color: #f4f4f4;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.bg-success {
+  background-color: #28a745;
+}
+
+.text-success-lighter-1 {
+  color: #28a745;
+}
+
+.bg-success-lighter-1 {
+  background-color: #28a745;
+}
+
+.text-success-lighter-2 {
+  color: #28a745;
+}
+
+.bg-success-lighter-2 {
+  background-color: #28a745;
+}
+
+.text-success-lighter-3 {
+  color: #28a745;
+}
+
+.bg-success-lighter-3 {
+  background-color: #28a745;
+}
+
+.text-beigeC {
+  color: #f5f5dc;
+}
+
+.bg-beigeC {
+  background-color: #f5f5dc;
+}
+
+.text-beigeC-lighter-1 {
+  color: beige;
+}
+
+.bg-beigeC-lighter-1 {
+  background-color: beige;
+}
+
+.text-beigeC-lighter-2 {
+  color: beige;
+}
+
+.bg-beigeC-lighter-2 {
+  background-color: beige;
+}
+
+.text-beigeC-lighter-3 {
+  color: beige;
+}
+
+.bg-beigeC-lighter-3 {
+  background-color: beige;
+}
+
+.text-info {
+  color: #17a2b8;
+}
+
+.bg-info {
+  background-color: #17a2b8;
+}
+
+.text-info-lighter-1 {
+  color: #17a2b8;
+}
+
+.bg-info-lighter-1 {
+  background-color: #17a2b8;
+}
+
+.text-info-lighter-2 {
+  color: #17a2b8;
+}
+
+.bg-info-lighter-2 {
+  background-color: #17a2b8;
+}
+
+.text-info-lighter-3 {
+  color: #17a2b8;
+}
+
+.bg-info-lighter-3 {
+  background-color: #17a2b8;
+}
+
+.text-warning {
+  color: #ffc107;
+}
+
+.bg-warning {
+  background-color: #ffc107;
+}
+
+.text-warning-lighter-1 {
+  color: #ffc107;
+}
+
+.bg-warning-lighter-1 {
+  background-color: #ffc107;
+}
+
+.text-warning-lighter-2 {
+  color: #ffc107;
+}
+
+.bg-warning-lighter-2 {
+  background-color: #ffc107;
+}
+
+.text-warning-lighter-3 {
+  color: #ffc107;
+}
+
+.bg-warning-lighter-3 {
+  background-color: #ffc107;
+}
+
+.text-error {
+  color: #dc3545;
+}
+
+.bg-error {
+  background-color: #dc3545;
+}
+
+.text-error-lighter-1 {
+  color: #dc3545;
+}
+
+.bg-error-lighter-1 {
+  background-color: #dc3545;
+}
+
+.text-error-lighter-2 {
+  color: #dc3545;
+}
+
+.bg-error-lighter-2 {
+  background-color: #dc3545;
+}
+
+.text-error-lighter-3 {
+  color: #dc3545;
+}
+
+.bg-error-lighter-3 {
+  background-color: #dc3545;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+}
+
+.text-light-lighter-1 {
+  color: white;
+}
+
+.bg-light-lighter-1 {
+  background-color: white;
+}
+
+.text-light-lighter-2 {
+  color: white;
+}
+
+.bg-light-lighter-2 {
+  background-color: white;
+}
+
+.text-light-lighter-3 {
+  color: white;
+}
+
+.bg-light-lighter-3 {
+  background-color: white;
+}
+
+.text-dark {
+  color: #343a40;
+}
+
+.bg-dark {
+  background-color: #343a40;
+}
+
+.text-dark-lighter-1 {
+  color: #343a40;
+}
+
+.bg-dark-lighter-1 {
+  background-color: #343a40;
+}
+
+.text-dark-lighter-2 {
+  color: #343a40;
+}
+
+.bg-dark-lighter-2 {
+  background-color: #343a40;
+}
+
+.text-dark-lighter-3 {
+  color: #343a40;
+}
+
+.bg-dark-lighter-3 {
+  background-color: #343a40;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  padding: 20px;
+  background-color: #f5f5dc;
+  color: #343a40;
+}
+
+h2 {
+  color: #007bff;
+}
+
+p, ul, li {
+  color: #343a40;
+}
+
+pre {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+code {
+  font-family: monospace;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #343a40;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+section .btn, section .extend {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+section .mixin {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  background-color: #17a2b8;
+  color: #343a40;
+}
+section .extend {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */

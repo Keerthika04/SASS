@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>SASS Features</title>
+</head>
+
+<body class="bg-secondary">
+    <section class="bg-light">
+        <h2>What is Sass?</h2>
+        <p>Sass (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted into
+            Cascading Style Sheets (CSS). It adds special features to CSS, such as variables, nested rules, mixins,
+            maps,
+            and inheritance, making it easier to manage styles in large projects.</p><br>
+    </section>
+
+    <section class="bg-light">
+        <h2>Key Features of Sass</h2>
+        <ul>
+            <li><strong>Variables:</strong> Store values like colors, fonts, or any CSS value to reuse throughout your
+                stylesheet.</li>
+            <li><strong>Nested Rules:</strong> Write CSS in a nested manner, making it more readable and organized.</li>
+            <li><strong>Mixins:</strong> Create reusable chunks of CSS that can include variables and other mixins.</li>
+            <li><strong>Partials:</strong> Split your CSS into smaller, manageable files and include them in a main
+                stylesheet.</li>
+            <li><strong>Inheritance:</strong> Use the @extend directive to share a set of CSS properties from one
+                selector to another.</li>
+            <li><strong>Maps:</strong> Use key-value pairs to store related values, like theme colors, making it easier
+                to manage and update.</li>
+        </ul>
+    </section>
+
+    <section class="bg-light">
+        <h2>Getting Started with Sass</h2>
+        <p>To use Sass, you need to install it. You can do this via npm:</p>
+        <pre class="bg-dark text-light"><code>npm install sass --save-dev</code></pre>
+        <p>Once installed, you can compile your Sass files to CSS using a command like the following:</p>
+        <pre class="bg-dark text-light"><code>sass input.scss output.css</code></pre>
+
+        <p>If you want to automate your Sass compilation process, you can use a command in your
+            <code>package.json</code> file. Here’s an example command:
+        </p>
+        <pre
+            class="bg-dark text-light"><code>"start": "sass ./Sass/style.scss ./Css/style.css && sass ./Sass/style.scss ./Css/style.min.css --style=compressed --no-source-map --watch"</code></pre>
+
+        <p>This command does the following:</p>
+        <ul>
+            <li><strong>Compiles:</strong> It compiles <code>style.scss</code> from the <code>Sass</code> directory to
+                <code>style.css</code> in the <code>Css</code> directory.
+            </li>
+            <li><strong>Minifies:</strong> It also creates a minified version, <code>style.min.css</code>, which is
+                optimized for production.</li>
+            <li><strong>Watches for Changes:</strong> The <code>--watch</code> flag allows it to automatically recompile
+                when you make changes to your Sass files.</li>
+            <li><strong>Compresses:</strong> The <code>--style=compressed</code> option reduces the file size of the
+                output CSS.</li>
+            <li><strong>No Source Maps:</strong> The <code>--no-source-map</code> flag prevents source map files from
+                being generated, keeping the output cleaner.</li>
+        </ul>
+    </section>
+
+    <section class="bg-light">
+        <h2>Variables</h2>
+        <p>Variables in Sass allow you to store values like colors, fonts, or any CSS property for reuse throughout your
+            stylesheets. This reduces repetition and makes it easier to manage changes.</p>
+        <pre class="bg-dark text-light"><code>
+// Define variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: Helvetica, sans-serif;
+
+// Use variables
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+}
+
+button {
+  background-color: $secondary-color;
+  color: white;
+}
+        </code></pre>
+    </section>
+
+    <section class="bg-light">
+        <h2>Maps</h2>
+        <p>Maps in Sass allow you to store key-value pairs, making it easier to group related values like theme colors
+            or breakpoints.</p>
+        <pre class="bg-dark text-light"><code>
+// Define a map of theme colors
+$theme-colors: (
+  primary: #3498db,
+  secondary: #2ecc71,
+  warning: #e74c3c,
+  info: #8e44ad
+);
+
+// Accessing values from the map
+button {
+  background-color: map-get($theme-colors, primary);
+  color: white;
+}
+
+.alert-warning {
+  background-color: map-get($theme-colors, warning);
+  color: white;
+}
+        </code></pre>
+        <p>This example shows how to create a map called <code>$theme-colors</code> and use the <code>map-get</code>
+            function to access the colors inside it.</p>
+    </section>
+
+    <section class="bg-light">
+        <h2>Nested Rules</h2>
+        <p>Nesting allows you to structure your CSS in a way that mimics the HTML structure. This improves readability
+            and keeps related styles together.</p>
+        <pre class="bg-dark text-light"><code>
+nav {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+        </code></pre>
+    </section>
+
+    <section class="bg-light">
+        <h2>Inheritance (&#64;extend)</h2>
+        <p>With the &#64;extend directive, you can share a set of styles between selectors, avoiding repetition in your
+            code.</p>
+        <pre class="bg-dark text-light"><code>
+// Base button style
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+// Extend the button style
+.primary-button {
+  @extend .button;
+  background-color: $primary-color;
+  color: white;
+}
+
+.secondary-button {
+  @extend .button;
+  background-color: $secondary-color;
+  color: white;
+}
+        </code></pre>
+    </section>
+
+    <section class="bg-light">
+        <h2>Mixins</h2>
+        <p>Mixins allow you to create reusable chunks of code that can be included in other rules. You can even pass
+            arguments to them to customize the output.</p>
+        <pre class="bg-dark text-light"><code>
+// Use of Mixin
+@mixin rounded-corners($radius) {
+    border-radius: $radius;
+    border: none;
+}
+
+// Use of extend and Mixin
+.btn {
+    @include rounded-corners(5px);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+// Use of Mixin
+.mixin {
+    @include rounded-corners(5px);
+    padding: 10px 20px;
+    background-color: map-get($colors, info);
+    color: map-get($colors , dark);
+}
+
+.extend {
+// Use of extend
+    @extend .btn;
+    background-color: map-get($colors, success);
+    color: map-get($colors , light);
+}
+        </code></pre>
+        <br>
+        <h4>Output: </h4>
+        <button class="mixin">Mixin</button>
+        <button class="extend">Extend</button>
+
+    </section>
+
+    <section class="bg-light">
+        <h2>Partials</h2>
+        <p>Partials let you split your Sass into smaller, more manageable files, which are then imported into a main
+            stylesheet. This helps in organizing your code.</p>
+        <pre class="bg-dark text-light"><code>
+// _variables.scss
+$primary-color: #3498db;
+$font-stack: Helvetica, sans-serif;
+
+// _buttons.scss
+button {
+  background-color: $primary-color;
+  font-family: $font-stack;
+}
+
+// main.scss
+@import 'variables';
+@import 'buttons';
+        </code></pre>
+    </section>
+
+</body>
+
+</html>
